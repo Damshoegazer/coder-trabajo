@@ -57,6 +57,15 @@ header {
     font-family: Gordita-Light;
     font-size: 15px;
     background-color: aliceblue;
+    animation: change_color 4s linear infinite alternate;
+}
+@keyframes change_color {
+    0% {
+        background: #fff;
+    }
+    100% {
+        background: #DC2D7D;
+    }
 }
 .nav_style {
     display: flex;
@@ -208,6 +217,7 @@ main {
     width: 20vmax;
     
 }
+
 /* SERVICIOS */
 .servicios__container {
     display: grid;
@@ -217,6 +227,11 @@ main {
     grid-template-columns: repeat(auto-fill, minmax(38rem,1fr));
     margin: 15vh 10vw 0vh 10vw;
     padding-bottom: 10vh;
+    
+}
+.servicios__container :hover {
+    background-color: #DC2D7D;
+    transition: 300ms;
 }
 .img__servicios {
     display: flex;
