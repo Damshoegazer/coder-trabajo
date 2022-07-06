@@ -27,28 +27,24 @@ html {
     src: url(./fonts/TruenoUltLt.otf);
 }
 
-/* COMIENZO */
-/* body {
-    
-} */
+::-webkit-scrollbar {
+    width: 1.5vh;
+}
+::-webkit-scrollbar-corner {
 
-.general__grid {        /* GRID INDEX */
-    width: 100%;
-    height: 350vh;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: /* header 4, banner_container 4, main 4, footer 4;  */
-    "header header header header"
-    "banner_container banner_container banner_container banner_container"
-    "main main main main"
-    "footer footer footer footer"
+}
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+::-webkit-scrollbar-thumb {
+    background: #DC2D7D;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 /* NAV */
-header {
-    grid-area: header;
-}
+
 
 .banner_top_white_nav {
     width: 100%;
@@ -59,82 +55,39 @@ header {
     background-color: aliceblue;
     animation: change_color 4s linear infinite alternate;
 }
+
 @keyframes change_color {
     0% {
         background: #fff;
+        color: black;
     }
     100% {
-        background: #DC2D7D;
+        background: black;
+        color: #fff;
     }
 }
-.nav_style {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: black;
-    height: 9.5vh;
-
-}
-.ul_nav {
-    height: 9.5vh;
-    margin-bottom: 1vh;
-    margin-top: -1vh;
-}
-.ul_nav img {
-    display: none;
-}
 .header_nav {
-    width: 100%;
-    height: 12.5vh;
-}
-.logo_container {
-    display: flex;
-    flex-direction: column;
-    height: 6.5vh;
-    position: relative;
-    bottom: 0.5vh;
-    
-}
-.logo_container img {
-    width: 40%;
-    margin-bottom: 30px;
-    
+    height: 10vh;
 }
 
-
-
-.ul_nav ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 2vh 10vw 2vh 10vw;
-    height: 5vh;
-    font-family: Gordita-Light;
-    text-align: center;
-    padding-bottom: 5.5vh;
-    padding-top: 0px;
-
+.nav_size {
+    height: 10vh;
 }
-.ul_nav ul :hover {
+
+.bg-dark_nav {
+    background-color: black;
+}
+
+.navbar-nav :hover {
     background-color: #DC2D7D;
-    font-weight: 1000;
+    color: #fff;
 }
-.ul_nav li {
-    padding: 2rem 2rem 2.2rem 2rem; 
-    font-size: 15px;
-    
-}
-.ul_nav li a {
-    color: aliceblue;
-}
-.logo_container {
-    color: aliceblue;
-    font-family: TruenoSBd;
-    font-size: 20px;
-    margin-top: 3vh;
-    margin-left: 10vw;
-}
+
+
+
+/* BANNER */
+
+
 .video_banner {
     width: 100%;
 }
@@ -142,36 +95,7 @@ header {
     width: 100%;
 }
 
-/* BANNER */
 
-.banner_container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    grid-area: banner_container;
-    
-}
-
-
-.text_banner {
-    width: 40vw;
-    text-align: start;
-    background-color: rgb(0, 0, 0,40%);
-    color: aliceblue;
-    font-family: TruenoSBd;
-    font-size: 40px;
-    position: absolute;
-    margin-top: 50vh;
-    padding-right: 0vw;
-    padding-left: 5vw;
-    box-shadow: 10px 10px 0px white;
-    /* border: 10px solid white; */
-
-}
-main {
-    grid-area: main;
-}
 
 /* PRODUCTOS */
 
@@ -210,7 +134,7 @@ main {
 
 }
 .article__image {
-    /* background-color: white; */
+
     width: 20vw;
 }
 .article__image img {
@@ -273,96 +197,31 @@ main {
 }
 
 /* FOOTER */
-footer {
-    width: 100%;
-    height: 35vh;
-    background-color: black;
-    grid-area: footer;
-}
-.ul__footer {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin-left: 9vw;
-    /* margin-top: 10vh; */
-}
+
 .ul__footer a {
     font-family: Gordita-light;
-    font-size: 20px;
-    color: white;
-    
 }
 
-.ul__footer li {
-    padding: 20px 10px 10px 20px;
-    
-}
+
 .ul__footer li :hover {
     background-color: #DC2D7D;
     
 }
-.derechos {
-    transform: translateY(-10px);
-}
-.derechos p {
-    color: aliceblue;
-    text-align: center;
-    font-family: Gordita-light;
-    
-}
-.redes {
-    width: 30vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    transform: translate(59vw, -220px);
-}
-.redes a {
-    margin: 0vh 0.5vw 0vh 0.5vw;
-    
-}   
+
     
 .redes a :hover {
     border: 4px solid #DC2D7D;
 }
 
 /* NOSOTROS */
-.general__grid__nosotros {          /* GRID NOSOTROS */
-    width: 100%;
-    height: 300vh;
-    margin: 0rem;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: 
-    "header_nosotros header_nosotros header_nosotros"
-    "section_nosotros section_nosotros section_nosotros"
-    "footer_nosotros footer_nosotros footer_nosotros"
 
-}
 
-.header_nosotros {
-    grid-area: header_nosotros;
-}
-.section_nosotros {
-    grid-area: section_nosotros;
-}
-.footer_nosotros {
-    grid-area: footer_nosotros;
-}
 .body_nosotros {
     background-image: url(./assets/Desktop\ -\ 3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.article_container {
-    display: flex;
-    flex-direction: row;
-}
 
 .text_article_nosotros {
     display: flex;
@@ -390,6 +249,7 @@ footer {
 .img_nosotros1 img {
     display: flex;
     width: 90%;
+    z-index: -2;
     
 }
 .article_container2 {
@@ -431,27 +291,6 @@ footer {
 
 /* CATALOGO */
 
-
-.general__grid__catalogo {                   /* GRID CATALOGO */
-    width: 100%;
-    height: 300vh;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: 
-    "header_catalogo header_catalogo header_catalogo"
-    "main_catalogo main_catalogo main_catalogo"
-    "footer_catalogo footer_catalogo footer_catalogo"
-}
-.header_catalogo {
-    grid-area: header_catalogo;
-}
-.main_catalogo {
-    grid-area: main_catalogo;
-}
-.footer_catalogo {
-    grid-area: footer_catalogo;
-}
 .text_catalogo {
     font-family: TruenoUltLt;
     background-color: black;
@@ -476,7 +315,6 @@ footer {
 }
 
 .catalogo_zapa {
-    /* background-color: #DC2D7D; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -498,6 +336,7 @@ footer {
     margin: 2vh 1vw 1vh 1vw;
 }
 .card_text_catalogo p {
+    margin: 0;
     font-size: 18px;
     color: rgb(90, 90, 90);
 
@@ -505,33 +344,7 @@ footer {
 
 /* CONTACTO */
 
-.general__grid__contacto {                        /* GRID CONTACTO */
-    width: 100%;
-    height: 200vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: 
-    "header_contacto header_contacto header_contacto"
-    "main_contacto main_contacto main_contacto"
-    "footer_contacto footer_contacto footer_contacto"
-}
-.header_contacto {
-    grid-area: header_contacto;
-}
-.main_contacto {
-    grid-area: main_contacto;
-}
-.footer_contacto {
-    grid-area: footer_contacto;
-}
-.main_contact {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    /* margin-bottom: 20vh; */  
-}
+
 .form_text {
     display: flex;
     flex-direction: column;
@@ -602,8 +415,6 @@ footer {
 .submit input {
     background-color: black;
     color: white;
-    /* border-style: outset; */
-    /* border-color: #0066A2; */
     width: 400px;
     height: 40px;
     font: bold15px arial,sans-serif;
@@ -651,13 +462,17 @@ footer {
     }
 
     /* CATALOGO/MEDIAS */
-    
+    .catalogo_container {
+        margin-left: 12vw;
+    }
     .catalogo_zapa {
         display: grid;
         grid-template-columns: 2;
         box-shadow: 10px 20px 35px -30px white
     }
-    
+    .catalogo_zapa {
+        width: 300px;
+    }
     
 
 }
@@ -737,29 +552,23 @@ footer {
     }
 
     /* CONTACTO/MEDIA */
-    .general__grid__contacto {
-        width: 100%;
-        height: 200vh;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: 
-        "header_contacto header_contacto header_contacto"
-        "main_contacto main_contacto main_contacto"
-        "footer_contacto footer_contacto footer_contacto"
-    }
     
     .back__rectangle img {
         width: 50%;
-        transform: translate(20vw,-70vh);  
+        transform: translate(20vw,-70vh); 
+    }
+    .back__rectangle  {
+        margin-top: 20vh;
+        z-index: -2;
     }
     .footer_contacto {
         background-color: black;
     }
     
     .form_text {
-        margin-top: 0;
+        margin-top: 15vh;
         margin-left: 2vw;
+        z-index: -1;
     }
     .form_text h1 {
         color: black;
@@ -770,7 +579,8 @@ footer {
     .form_class {
         width: 50%;
         margin-right: 5vw;
-        margin-top: 0;
+        margin-top: 15vh;
+        z-index: -1;
     }
     .form_class input {
         margin: 8px;
@@ -792,8 +602,8 @@ footer {
 @media (max-width: 741px) {
     /* NOSOTROS/MEDIAS */
     .text_article_nosotros {
-        margin-top: 0;
-        bottom: 20vh;
+        margin-top: 20vh;
+        /* bottom: 20vh; */
         margin-left: 5vw;
     }
     .text_article_nosotros h2 {
@@ -807,7 +617,9 @@ footer {
         display: flex;
         width: 60%;
         position: relative;
-        bottom: 100px;
+        top: 10vh;
+
+        /* bottom: 100px; */
     }
 
 
@@ -838,8 +650,8 @@ footer {
         padding-top: 10vh;
     }
     .back__rectangle {
-        transform: translateY(-50vh);
-        z-index: -1;
+        transform: translateY(-90vh);
+        z-index: -2;
     }
     
     .form_class {
@@ -882,6 +694,7 @@ footer {
     }
 }
 
+
 @media (max-width: 949px) {
     .img__servicios {
         display: flex;
@@ -914,6 +727,14 @@ footer {
     
     }
 }
+@media (max-width: 917px) {
+    .catalogo_container {
+        width: 50%;
+    }
+    .catalogo_zapa {
+        width: 200px;
+    }
+}
 @media (max-width: 912px) {
     .ul_nav ul {
         display: none;
@@ -936,7 +757,7 @@ footer {
 }
 
 .form_text {
-    margin-top: 0;
+    margin-top: 15vh;
     margin-left: 0vw;
     margin-bottom: 0;
 }
@@ -950,7 +771,8 @@ footer {
 .form_class {
     width: 50%;
     margin-right: 5vw;
-    margin-top: 0;
+    margin-top: 15vh;
+    z-index: 1;
 }
 .form_class input {
     margin: 8px;
@@ -966,12 +788,22 @@ footer {
 }
 @media (max-width: 917px) {
     /*  CATALOGO/MEDIAS */
-
-    
     .catalogo_container {
-        width: 88vw;
-        margin-left: 4vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(30rem, 1fr));
+        gap: 10rem;
+        align-items: center;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        margin-top: 10vh;
+        margin-bottom: 20vh;
     }
+    .catalogo_zapa {
+        width: 50vw;
+        margin-left: 14vw;
+        box-shadow: 10px 20px 35px -30px black;
+    }
+    
 }
 @media (max-width: 580px) {
     /* CONTACTO/MEDIA */
